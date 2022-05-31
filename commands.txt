@@ -1,0 +1,12 @@
+kind create cluster --name testigo
+
+kubectl cluster-info --context kind-testigo
+
+kubectl get nodes
+
+
+kind delete cluster --name testigo
+
+
+kubectl apply -f redis-leader-deployment.yaml
+
